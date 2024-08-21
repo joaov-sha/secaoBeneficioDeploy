@@ -1,0 +1,118 @@
+*{
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    margin-top: 50px;
+}
+
+h1, p{
+    text-align: center;
+}
+
+h1{
+    margin-top: 15px;
+    color: green;
+}
+
+hr{
+    width: 45%;
+    margin-bottom: 60px;
+}
+
+p{
+    margin: 10px;
+    color: #55555A;
+}
+
+.container{
+    width: 1200px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+}
+
+.card{
+    height: 175px;
+    width: calc(33.3% - 25px);
+    font-weight: bold;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 1px rgba(0, 2, 14, 0.2);
+    border-radius: 30px;
+}
+
+.card p{
+    padding: 0px;
+    line-height: 1.2em;
+    margin: 0px;
+    color: black;
+    font-weight: 600;
+    width: 125%;
+    margin-left: -20px;
+}
+
+.card:nth-child(even){
+    background-color: #66BE0E;
+}
+
+.card:nth-child(even), .card:nth-child(odd){
+    cursor: pointer;
+}
+
+.card div:nth-child(2){
+    margin-top: 5px;
+    width: 50%;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        width: 100%;
+    }
+
+    .card{
+        width: 85%;
+    }
+
+    hr{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width: 1000px) {
+    .container{
+        width: 100%;
+    }
+
+    hr{
+        width: 75%;
+    }
+
+    .content{
+        flex-direction: row;
+    }
+
+    .card{
+        height: 150px;
+        width: 45%;
+    }
+
+    .card p{
+        width: 125%;
+        margin-left: -20px;
+        text-align: center;
+    }
+}
